@@ -1,3 +1,52 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto.eot');
+    src: url('../fonts/Roboto.eot') format('embedded-opentype'),
+         url('../fonts/Roboto.woff2') format('woff2'),
+         url('../fonts/Roboto.woff') format('woff'),
+         url('../fonts/Roboto.ttf') format('truetype'),
+         url('../fonts/Roboto.svg#Roboto') format('svg');
+	font-display: fallback;
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoBlack';
+    src: url('../fonts/RobotoBlack.eot');
+    src: url('../fonts/RobotoBlack.eot') format('embedded-opentype'),
+         url('../fonts/RobotoBlack.woff2') format('woff2'),
+         url('../fonts/RobotoBlack.woff') format('woff'),
+         url('../fonts/RobotoBlack.ttf') format('truetype'),
+         url('../fonts/RobotoBlack.svg#RobotoBlack') format('svg');
+	font-display: fallback;
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/RobotoBold.eot');
+    src: url('../fonts/RobotoBold.eot') format('embedded-opentype'),
+         url('../fonts/RobotoBold.woff2') format('woff2'),
+         url('../fonts/RobotoBold.woff') format('woff'),
+         url('../fonts/RobotoBold.ttf') format('truetype'),
+         url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+	font-display: fallback;
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/RobotoLight.eot');
+    src: url('../fonts/RobotoLight.eot') format('embedded-opentype'),
+         url('../fonts/RobotoLight.woff2') format('woff2'),
+         url('../fonts/RobotoLight.woff') format('woff'),
+         url('../fonts/RobotoLight.ttf') format('truetype'),
+         url('../fonts/RobotoLight.svg#RobotoLight') format('svg');
+	font-display: fallback;
+	font-weight: 100;
+	font-style: normal;
+}
+
 @import '../css/_css/bootstrap.min.css'
 @import '../css/_css/flipclock.min.css'
 
@@ -5,15 +54,21 @@
 	margin 0
 	padding 0
 	outline none
-
+body
+	font-size: 18px
+	font-family: "Roboto", sans-serif
+	color #514134
+	line-height: 1.3
+	background-color: rgba(#FCFDDB,.3)
 a
 	color: #fefefe
 	&:focus
 		outline: 0
 	&:hover
 		text-decoration none
-h1,h2,h3,h4,h5,h6
+h2,h3,h4,h5,h6
 	font-weight normal
+	font-family: "RobotoBold", sans-serif
 	margin 0
 button
 	border none
@@ -22,7 +77,7 @@ header
 footer
 	width 100%
 	display block
-.video_wrapper
+.video-wrapper
 	margin 0 auto
 	position relative
 	width 100%
@@ -54,3 +109,47 @@ footer
 		right 0
 		bottom 0
 		cursor pointer
+.button
+	display block
+	margin 0 auto
+	width 100%
+	max-width 230px
+	border-radius: 5px
+	height 50px
+	line-height 46px
+	text-align: center
+	background-color: #8D3E40
+	font-family: "RobotoBold", sans-serif
+	transition: all .1s ease-in
+	color #fff
+	box-shadow: 0 0 12px 3px rgba(0,0,0,.1);
+	border: 2px solid #FDFEDE
+	text-transform: uppercase
+	&:focus
+		background-color: #8D3E40
+		color #fff
+		text-decoration: none
+	&:hover
+		background-color: #BB5256
+		color #fff
+		text-decoration: none
+		transform: translateY(-3px)
+		box-shadow: 0 0 12px 3px rgba(0,0,0,.15);
+	&:active
+		color #fff
+		box-shadow: 0 0 12px 3px rgba(0,0,0,.1);
+		text-decoration: none
+		transform: translateY(3px)
+.general-title
+	text-align: center
+	margin-bottom: 40px
+	font-size: 30px
+	color #8D3E40
+	text-transform: uppercase
+@import 'main/main'
+@import 'main/plan'
+@import 'main/get'
+@import 'main/prices'
+@import 'main/record'
+@import 'main/footer'
+@import 'main/medias'
