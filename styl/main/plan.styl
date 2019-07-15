@@ -5,3 +5,57 @@
 	font-size: 20px
 	line-height: 1.5
 	margin-bottom: 4%
+.lessons-container
+	width 100%
+	max-width 860px
+	margin 0 auto
+.lessons-links
+	text-align: center
+	list-style none
+	li
+		display: inline-block
+		height 45px
+		line-height: 41px
+		font-size: 20px
+		border-radius: 5px
+		border: 2px solid #BB863D
+		color: #BB863D
+		width 100%
+		max-width 120px
+		margin 0 5px 5px
+		cursor pointer
+		transition: all .4s ease
+		&.active
+		&:hover
+			background-color: #BB863D
+			color: #FDFEDE
+			box-shadow: 0 2px 5px rgba(#BB863D,.5)
+.lessons
+	margin: 15px auto 0
+	box-shadow: 0 2px 5px rgba(#BB863D,.5)
+	padding 20px
+	background-color #fff
+.lesson-title
+	font-size: 24px
+	margin-bottom: 15px
+	text-transform: uppercase
+	text-align: center
+	color: #BB863D
+.lesson-subtitle 
+	font-size: 20px
+.lesson-list
+	padding-left: 10px
+	list-style none
+	li
+		margin-top: 10px
+		position relative
+		padding-left: 15px
+		&:before
+			content: ''
+			border-radius: 2px
+			position: absolute
+			top: 8px
+			left 0
+			width 9px
+			height 9px
+			background-color: #BB863D
