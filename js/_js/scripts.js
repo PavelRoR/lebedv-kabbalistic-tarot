@@ -74,7 +74,7 @@ $(document).ready(function () {
     $(".recs-container").lightTabs2();
     /* Таймер */
     var clock;
-    var futureDate = new Date("July 18, 2019 00:00 AM UTC+3");
+    var futureDate = new Date("July 19, 2019 00:00 AM UTC+3");
     var currentDate = new Date();
     var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
@@ -88,7 +88,11 @@ $(document).ready(function () {
     }
     if (diff < 0) {
         diff = 0;
-        // $('.button-buy').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3445&clean=true&lg=ru');
+        $('.clock-stop').addClass("alert-danger");
+        $('.clock-stop').html("Скидка уменьшилась!");
+        $('#sale').text('1 000р.');
+        $('#today').text('19 900р.');
+        $('#link').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3488&clean=true&lg=ru');
         // $('.price-full span').css('textDecoration', 'none');
         // $('.timer, .price-sale, .price-today').remove();
     }
@@ -98,7 +102,11 @@ $(document).ready(function () {
         language: 'ru',
         callbacks: {
             stop: function () {
-                // $('.button-buy').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3445&clean=true&lg=ru');
+                $('.clock-stop').addClass("alert-danger");
+                $('.clock-stop').html("Скидка уменьшилась!");
+                $('#sale').text('1 000р.');
+                $('#today').text('19 900р.');
+                $('#link').attr('href', 'https://shop.mastervision.su/?r=ordering/cart/as1&id=3488&clean=true&lg=ru');
                 // $('.price-full span').css('textDecoration', 'none');
                 // $('.timer, .price-sale, .price-today').remove();
             }
